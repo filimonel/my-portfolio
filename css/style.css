@@ -47,6 +47,7 @@
   background-size: 30px;
   background-position: center;
   cursor: pointer;
+  filter: invert(1);
 }
 
 .toggle.active {
@@ -55,6 +56,7 @@
   background-size: 25px;
   background-position: center;
   cursor: pointer;
+  filter: invert(1);
 }
 
 .showcase video {
@@ -134,7 +136,6 @@
 
 .socials li a {
   display: inline-block;
-  filter: invert(1);
   margin-right: 20px;
   transform: scale(0.5);
   transition: 0.5s;
@@ -145,9 +146,23 @@
 }
 
 .fab {
-  color: black;
+  color: white;
 }
 
 .fas {
-  color: black;
+  color: white;
+}
+
+@media(max-width: 991px) {
+  .showcase, .showcase header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
 }
