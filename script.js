@@ -1,5 +1,7 @@
-const menu = document.querySelector(".toggle");
+const menuToggle = document.querySelector(".menu-btn");
+const showcase = document.querySelector(".showcase");
 
-menu.addEventListener("click", (e) => {
-  menu.classList.toggle("active");
+menuToggle.addEventListener("click", (e) => {
+  menuToggle.classList.toggle("active");
+  showcase.classList.toggle("active");
 });
