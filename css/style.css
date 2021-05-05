@@ -86,6 +86,7 @@
   font-weight: 700;
   line-height: 1em;
   text-transform: uppercase;
+  text-shadow: 0 0 6px rgb(0 0 0 / 20%);
 }
 
 .text p {
@@ -93,6 +94,7 @@
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
+  text-shadow: 0 0 6px rgb(0 0 0 / 20%);
 }
 
 .text a {
@@ -198,6 +200,11 @@
 
 .fas {
   color: white;
+}
+
+.about-me {
+  height: 600px;
+  background-color: #111;
 }
 
 /* Resposive */
