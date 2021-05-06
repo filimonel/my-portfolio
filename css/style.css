@@ -13,7 +13,7 @@
 }
 
 body {
-  height: 300vh;
+  height: 325vh;
 }
 
 /* Overlay */
@@ -302,9 +302,9 @@ body {
 .contacts {
   position: absolute;
   background-color: rgb(205, 166, 231);
-  top: 250vh;
+  top: 300vh;
   width: 100%;
-  height: 50vh;
+  height: 25vh;
 }
 
 /********************** Socials *********************/
