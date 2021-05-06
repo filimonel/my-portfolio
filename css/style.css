@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
   padding: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #111;
   color: #fff;
@@ -65,12 +65,12 @@ body {
   height: 75px;
   width: 75px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 .logo:hover {
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 .showcase video {
@@ -86,6 +86,10 @@ body {
 .text {
   position: relative;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .text h2 {
@@ -130,10 +134,11 @@ body {
   letter-spacing: 2px;
   transition: 0.2s;
   text-decoration: none;
+  text-shadow: 0 0 1px rgb(0 0 0 / 20%);
 }
 
 .text a:hover {
-  letter-spacing: 6px;
+  letter-spacing: 3px;
 }
 
 
@@ -235,6 +240,40 @@ body {
   font-weight: 400;
   max-width: 700px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  animation: fadeIn linear 5s;
+  -webkit-animation: fadeIn linear 5s;
+  -moz-animation: fadeIn linear 5s;
+  -o-animation: fadeIn linear 5s;
+  -ms-animation: fadeIn linear 5s;
+}
+
+.about-me.active p {
+  
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
 
