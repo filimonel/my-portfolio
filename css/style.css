@@ -14,6 +14,7 @@
 
 body {
   height: 325vh;
+  background-color: #FAFAFA;
 }
 
 /* Overlay */
@@ -123,7 +124,7 @@ body {
   
 }
 
-.text a {
+.nav-btn {
   display: inline-block;
   font-size: 1em;
   background: #fff;
@@ -134,7 +135,7 @@ body {
   letter-spacing: 2px;
   transition: 0.2s;
   text-decoration: none;
-  text-shadow: 0 0 1px rgb(0 0 0 / 20%);
+  text-shadow: 0 0 1px rgb(149 189 187);
 }
 
 .text a:hover {
@@ -203,6 +204,8 @@ body {
   width: 100%;
   height: 100vh;
   color: #fff;
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%); */
 }
 .about-me img {
   position: absolute;
@@ -214,11 +217,12 @@ body {
   -webkit-filter: grayscale(0);
 	filter: grayscale(0);
   transition: .5s ease-in-out;
+  
 }
 
 .about-me img:hover {
   -webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	filter: grayscale(70%);
 	-webkit-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 }
@@ -230,25 +234,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-direction: column;
 }
 
-.about-me p {
+.text-about-me p {
   position: relative;
   z-index: 10;
   font-size: 1.1em;
   font-weight: 400;
   max-width: 700px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  animation: fadeIn linear 5s;
-  -webkit-animation: fadeIn linear 5s;
-  -moz-animation: fadeIn linear 5s;
-  -o-animation: fadeIn linear 5s;
-  -ms-animation: fadeIn linear 5s;
 }
 
-.about-me.active p {
-  
+.text-about-me a{
+  transition-delay: 10s;
+}
+
+.text-about-me.active {
+  animation: fadeIn linear 4s;
+  -webkit-animation: fadeIn linear 4s;
+  -moz-animation: fadeIn linear 4s;
+  -o-animation: fadeIn linear 4s;
+  -ms-animation: fadeIn linear 4s;
 }
 
 @keyframes fadeIn {
@@ -281,26 +288,36 @@ body {
 
 .projects {
   position: absolute;
-  background-color: greenyellow;
+  background-color: #FAFAFA;
   top: 200vh;
   width: 100%;
   height: 100vh;
 }
-
-/********************** Technology *********************/
-
-.technology {
-  position: absolute;
-  background-color: rgb(47, 196, 255);
-  top: 250vh;
+.project-title {
   width: 100%;
-  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-title h4 {
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--overlay-color);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  margin-top: 10px;
 }
 
 /********************** Contacts *********************/
 
 .contacts {
   position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: rgb(205, 166, 231);
   top: 300vh;
   width: 100%;
@@ -333,11 +350,17 @@ body {
   transform: scale(0.5) translateY(-15px);
 }
 
+/********************** Fontawesome Icons *********************/
+
 .fab {
   color: white;
 }
 
 .far {
+  color: white;
+}
+
+.fas {
   color: white;
 }
 
