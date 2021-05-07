@@ -326,6 +326,7 @@ body {
   max-width: 80rem;
 }
 /*********** Projects Cards ***********/
+
 .cols{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,22 +354,22 @@ body {
 .front,
 .back{
   background-size: cover;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25); */
   border-radius: 10px;
-    background-position: center;
-    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    text-align: center;
-    min-height: 280px;
-    height: auto;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1.5rem;
+  background-position: center;
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 .back{
@@ -455,7 +456,7 @@ body {
 }
 
 .front .inner p{
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -500,10 +501,6 @@ body {
 
 /*********** Icons ***********/
 
-.card-icon-wrapper {
-  /*  */
-}
-
 .program-icons-container ul {
   width: 100%;
   display: flex;
@@ -518,25 +515,50 @@ body {
   width: 100px;
 }
 
+.program-icons-container svg:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 /********************** Contacts *********************/
 
 .contacts {
   position: absolute;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  background-color: rgb(205, 166, 231);
-  top: 300vh;
+  background-color: var(--overlay-color);
+  top: 315vh;
   width: 100%;
-  height: 25vh;
+  height: 10vh;
 }
 
 /********************** Socials *********************/
 
 .socials {
   position: absolute;
-  bottom: 20px;
   z-index: 10;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

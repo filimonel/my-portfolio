@@ -5,7 +5,7 @@ const showcase = document.querySelector(".showcase");
 const menuSelections = document.querySelectorAll(".menu-selections");
 const aboutMeText = document.querySelector(".text-about-me");
 const aboutMe = document.querySelector(".about-me");
-const projectLink = document.querySelector(".project-link");
+const icons = document.querySelector(".program-icons-container > svg");
 
 // Event Listeners
 
