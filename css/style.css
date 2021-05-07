@@ -325,7 +325,7 @@ body {
   margin: 0 auto;
   max-width: 80rem;
 }
-
+/*********** Projects Cards ***********/
 .cols{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -496,6 +496,26 @@ body {
     width: 100%;
     margin: 0 0 2rem 0;
   }
+}
+
+/*********** Icons ***********/
+
+.card-icon-wrapper {
+  /*  */
+}
+
+.program-icons-container ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 100px;
+}
+
+.program-icons-container svg {
+  height: 100px;
+  width: 100px;
 }
 
 /********************** Contacts *********************/
