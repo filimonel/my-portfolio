@@ -380,10 +380,19 @@ body {
     font-size: 3em;
   }
 
-  .text h3 {
-    font-size: 2em;
+  .text-about-me {
+    left: 40px;
+    width: 200px;
   }
+}
 
+@media(max-width: 888px) {
+  .text h3 {
+    font-size: 3.5em;
+  }
+} 
+
+@media(max-width: 1124px) {
   .text-about-me {
     left: 40px;
     width: 200px;

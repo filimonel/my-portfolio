@@ -1,7 +1,12 @@
+// Dom Elements
+
 const menuToggle = document.querySelector(".menu-btn");
 const showcase = document.querySelector(".showcase");
 const menuSelections = document.querySelectorAll(".menu-selections");
 const aboutMeText = document.querySelector(".text-about-me");
+const projectLink = document.querySelector(".project-link");
+
+// Event Listeners
 
 menuToggle.addEventListener("click", (e) => {
   menuToggle.classList.toggle("active");
