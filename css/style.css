@@ -5,15 +5,17 @@
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  height: 300vh;
+  height: 325vh;
+  background-color: #FAFAFA;
 }
 
 /* Overlay */
@@ -37,7 +39,7 @@ body {
   min-height: 100vh;
   padding: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #111;
   color: #fff;
@@ -65,12 +67,12 @@ body {
   height: 75px;
   width: 75px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 .logo:hover {
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 .showcase video {
@@ -86,6 +88,10 @@ body {
 .text {
   position: relative;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .text h2 {
@@ -119,7 +125,7 @@ body {
   
 }
 
-.text a {
+.nav-btn {
   display: inline-block;
   font-size: 1em;
   background: #fff;
@@ -130,10 +136,11 @@ body {
   letter-spacing: 2px;
   transition: 0.2s;
   text-decoration: none;
+  text-shadow: 0 0 1px rgb(149 189 187);
 }
 
 .text a:hover {
-  letter-spacing: 6px;
+  letter-spacing: 3px;
 }
 
 
@@ -198,6 +205,8 @@ body {
   width: 100%;
   height: 100vh;
   color: #fff;
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%); */
 }
 .about-me img {
   position: absolute;
@@ -209,26 +218,27 @@ body {
   -webkit-filter: grayscale(0);
 	filter: grayscale(0);
   transition: .5s ease-in-out;
+  
 }
 
 .about-me img:hover {
   -webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	filter: grayscale(70%);
 	-webkit-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 }
 
 .text-about-me {
   position: relative;
-  top: 200px;
-  right: 130px;
+  top: 180px;
+  right: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-direction: column;
 }
 
-.about-me p {
+.text-about-me p {
   position: relative;
   z-index: 10;
   font-size: 1.1em;
@@ -237,43 +247,318 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
+.project-link {
+  transition: 0.5s;
+  position: relative;
+  bottom: 0;
+}
 
-/********************** Projects *********************/
+.project-link:hover {
+  transform: rotate(360deg);
+  transform: scale(1.1);
+}
+
+.text-about-me.active {
+  animation: fadeIn linear 3s;
+  -webkit-animation: fadeIn linear 3s;
+  -moz-animation: fadeIn linear 3s;
+  -o-animation: fadeIn linear 3s;
+  -ms-animation: fadeIn linear 3s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+/********************** Projects & Tech *********************/
 
 .projects {
   position: absolute;
-  background-color: greenyellow;
+  background-color: #FAFAFA;
   top: 200vh;
   width: 100%;
   height: 100vh;
 }
-
-/********************** Technology *********************/
-
-.technology {
-  position: absolute;
-  background-color: rgb(47, 196, 255);
-  top: 250vh;
+.project-title {
   width: 100%;
-  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-title h4 {
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--overlay-color);
+  text-shadow: 1px 1px 2px rgb(250 250 250);
+}
+
+.card-wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+/*********** Projects Cards ***********/
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25); */
+  border-radius: 10px;
+  background-position: center;
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.back{
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.7);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+/*********** Icons ***********/
+
+.program-icons-container ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 100px;
+}
+
+.program-icons-container svg {
+  height: 100px;
+  width: 100px;
+}
+
+.program-icons-container svg:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 /********************** Contacts *********************/
 
 .contacts {
   position: absolute;
-  background-color: rgb(205, 166, 231);
-  top: 250vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--overlay-color);
+  top: 315vh;
   width: 100%;
-  height: 50vh;
+  height: 10vh;
 }
 
 /********************** Socials *********************/
 
 .socials {
   position: absolute;
-  bottom: 20px;
   z-index: 10;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,6 +579,8 @@ body {
   transform: scale(0.5) translateY(-15px);
 }
 
+/********************** Fontawesome Icons *********************/
+
 .fab {
   color: white;
 }
@@ -302,9 +589,26 @@ body {
   color: white;
 }
 
+.fas {
+  color: white;
+}
+
 /********************** Resposivness *********************/
 
-@media(max-width: 798px) {
+/* Iphone X */
+@media(max-width: 375px) {
+  .text p {
+    font-size: 0.7em;
+  }
+}
+
+@media(max-width: 692px) {
+  .text p {
+    font-size: 1em;
+  }
+}
+
+@media(max-width: 771px) {
   .showcase, .showcase header {
     padding: 40px;
   }
@@ -313,10 +617,19 @@ body {
     font-size: 3em;
   }
 
-  .text h3 {
-    font-size: 2em;
+  .text-about-me {
+    left: 40px;
+    width: 200px;
   }
+}
 
+@media(max-width: 888px) {
+  .text h3 {
+    font-size: 3.5em;
+  }
+} 
+
+@media(max-width: 1124px) {
   .text-about-me {
     left: 40px;
     width: 200px;
