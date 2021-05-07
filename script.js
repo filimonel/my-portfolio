@@ -25,7 +25,3 @@ menuSelections.forEach((selection) => {
     aboutMeText.classList.toggle("active");
   });
 });
-
-aboutMe.addEventListener("mousemove", (e) => {
-  console.log("working");
-});
