@@ -1,0 +1,52 @@
+/********************** Contacts *********************/
+
+.contacts {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--overlay-color);
+    top: 315vh;
+    width: 100%;
+    height: 10vh;
+  }
+  
+  /********************** Socials *********************/
+  
+  .socials {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .socials li {
+    list-style: none;
+  }
+  
+  .socials li a {
+    display: inline-block;
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+  }
+  
+  .socials li a:hover {
+    transform: scale(0.5) translateY(-15px);
+  }
+  
+  /********************** Fontawesome Icons *********************/
+  
+  .fab {
+    color: white;
+  }
+  
+  .far {
+    color: white;
+  }
+  
+  .fas {
+    color: white;
+  }

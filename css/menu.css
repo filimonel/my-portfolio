@@ -1,0 +1,53 @@
+/********************** Menu Toggle *********************/
+
+.menu-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-image: url("images/open.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.5s;
+  }
+  
+  .menu-btn.active {
+    background-image: url("images/close.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.5s;
+  }
+  
+  /********************** Menu *********************/
+  
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu ul {
+    position: relative;
+    list-style: none;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--overlay-color);
+  
+  }
+  
+  .menu ul li a:hover {
+    color: var(--overlay-color);
+  }

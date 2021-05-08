@@ -1,0 +1,92 @@
+/********************** About Me *********************/
+.about-me {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%); */
+  }
+  .about-me img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    transition: .5s ease-in-out;
+    
+  }
+  
+  .about-me img:hover {
+    -webkit-filter: grayscale(100%);
+      filter: grayscale(70%);
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+  }
+  
+  .text-about-me {
+    position: relative;
+    top: 180px;
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .text-about-me p {
+    position: relative;
+    z-index: 10;
+    font-size: 1.1em;
+    font-weight: 400;
+    max-width: 700px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  .project-link {
+    transition: 0.5s;
+    position: relative;
+    bottom: 0;
+  }
+  
+  .project-link:hover {
+    transform: rotate(360deg);
+    transform: scale(1.1);
+  }
+  
+  .text-about-me.active {
+    animation: fadeIn linear 3s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
