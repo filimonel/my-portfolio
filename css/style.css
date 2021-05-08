@@ -44,6 +44,11 @@ body {
 }
 
 @media(max-width: 771px) {
+
+  body {
+    height: 355vh;
+  }
+
   .showcase, .showcase header {
     padding: 40px;
   }
@@ -56,6 +61,11 @@ body {
     left: 40px;
     width: 200px;
   }
+
+  .program-icons-container ul {
+    margin-top: 65px;
+  }
+
 }
 
 @media(max-width: 888px) {
@@ -63,6 +73,16 @@ body {
     font-size: 3.5em;
   }
 } 
+
+@media(max-width: 1024px) {
+  body {
+    height: 350vh;
+  }
+
+  .contacts {
+    top: 340vh;
+  }
+}
 
 @media(max-width: 1124px) {
   .text-about-me {
