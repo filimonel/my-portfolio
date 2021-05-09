@@ -30,10 +30,41 @@ body {
 
 /********************** Resposivness *********************/
 
-/* Iphone X */
+@media(max-width: 320px) {
+  .project-title h4 {
+    font-size: 1em;
+  }
+}
+/* Mobile M*/
 @media(max-width: 375px) {
   .text p {
     font-size: 0.7em;
+  }
+
+  .program-icons-container svg {
+    height: 55px;
+    width: 55px;
+  }
+
+  .project-title h4 {
+    font-size: 1.5em;
+  }
+}
+
+/* Mobile L */
+@media(max-width: 425px) {
+  .program-icons-container svg {
+    height: 50px;
+    width: 50px;
+  }
+
+  .project-title h4 {
+    font-size: 1.5em;
+  }
+
+  .program-icons-container svg {
+    height: 55px;
+    width: 55px;
   }
 }
 
@@ -89,4 +120,54 @@ body {
     left: 40px;
     width: 200px;
   }
+}
+
+/******************** Preloader ********************/
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 4s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
 }

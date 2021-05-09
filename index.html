@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="css/images/FLO.png">
     <script src="script.js" defer></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <script src="https://kit.fontawesome.com/589dc5df0f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
 
@@ -33,11 +32,6 @@
       
           <a class="nav-btn" href="https://drive.google.com/file/d/16dxRV0k_tqnmpIFdekuhGprVq2-vnhqk/view?usp=sharing" target="_blank">Download my CV</a>
         </div>
-
-        <!-- BG Music -->
-        <audio autoplay loop volume=2>
-          <source src="/bg.mp3">
-        </audio>
 
         </div>
 
@@ -229,6 +223,17 @@
         <li><a href="mailto: filimone.dev@gmail.com" target="_blank"><i class="far fa-envelope fa-5x"></i></a></li>
       </ul>
     </div>
-
+    
+    <!-- Loader -->
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("normal");
+        });
+    </script>
   </body>
 </html>
