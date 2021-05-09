@@ -35,10 +35,11 @@ body {
     font-size: 1em;
   }
 }
-/* Mobile M*/
+/************** Mobile M *******************/
+
 @media(max-width: 375px) {
   .text p {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   .program-icons-container svg {
@@ -51,8 +52,18 @@ body {
   }
 }
 
-/* Mobile L */
+/*************** Mobile L ********************/
+
 @media(max-width: 425px) {
+
+  .text h3 {
+    font-size: 1em;
+  }
+
+  .text span {
+    font-size: 1em;
+  }
+
   .program-icons-container svg {
     height: 50px;
     width: 50px;
@@ -124,12 +135,12 @@ body {
 
 /******************** Preloader ********************/
 
-.preload * {
+/* .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
-}
+} */
 
 .loader-wrapper {
   width: 100%;
