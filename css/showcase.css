@@ -25,18 +25,6 @@
     color: #fff;
     z-index: 2;
     transition: 0.5s;
-    animation: fadeInAnimation ease 3s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0.5; 
-    } 
-    100% { 
-        opacity: 1;
-    } 
   }
   
   .showcase.active {
