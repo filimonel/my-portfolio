@@ -31,8 +31,29 @@ body {
 /********************** Resposivness *********************/
 
 @media(max-width: 320px) {
+
+  .text h3 {
+    font-size: 1em;
+  }
+
+  .showcase header {
+    padding: 40px 25px;
+  }
+
+  .project-link {
+    top: 60px;
+  }
+
   .project-title h4 {
     font-size: 1em;
+  }
+
+  .socials li {
+    margin-right: 0px;
+  }
+
+  .socials li i {
+    width: 50px;
   }
 }
 /************** Mobile M *******************/
@@ -50,6 +71,14 @@ body {
   .project-title h4 {
     font-size: 1em;
   }
+
+  .socials li {
+    margin-right: 0px;
+  }
+
+  .socials li i {
+    width: 50px;
+  }
 }
 
 /*************** Mobile L ********************/
@@ -57,7 +86,7 @@ body {
 @media(max-width: 425px) {
 
   .text h3 {
-    font-size: 1em;
+    font-size: 2.5em;
   }
 
   .text span {
@@ -88,7 +117,7 @@ body {
 
 }
 
-@media(-width: 771px) {
+@media(max-width: 771px) {
 
   body {
     height: 355vh;
@@ -99,7 +128,7 @@ body {
   }
 
   .text h2 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .text-about-me {
@@ -114,9 +143,7 @@ body {
 }
 
 @media(max-width: 888px) {
-  .text h3 {
-    font-size: 3.5em;
-  }
+
 } 
 
 @media(max-width: 1024px) {
