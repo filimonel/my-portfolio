@@ -11,10 +11,15 @@
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/589dc5df0f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
-
   </head>
   <body>
-    
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+   
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+      
+      </div>
       <section class="showcase">
 
         <header>
@@ -190,7 +195,17 @@
         <li><a href="https://twitter.com/FLeaaetoa" target="_blank"><i class="fab fa-twitter fa-5x"></i></a></li>
         <li><a href="mailto: filimone.dev@gmail.com" target="_blank"><i class="far fa-envelope fa-5x"></i></a></li>
       </ul>
-    </div>
 
+      <script>
+        $(document).ready(function() {
+ 
+        setTimeout(function(){
+            $('body').addClass('loaded');
+            $('h1').css('color','#222222');
+        }, 3000);
+
+        });
+      </script>
+    </div>
   </body>
 </html>

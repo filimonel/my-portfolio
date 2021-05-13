@@ -6,7 +6,7 @@ const menuSelections = document.querySelectorAll(".menu-selections");
 const aboutMeText = document.querySelector(".text-about-me");
 const aboutMe = document.querySelector(".about-me");
 const icons = document.querySelector(".program-icons-container > svg");
-
+const body = document.querySelector("body");
 // Event Listeners
 
 menuToggle.addEventListener("click", (e) => {
@@ -24,4 +24,11 @@ menuSelections.forEach((selection) => {
     }
     aboutMeText.classList.toggle("active");
   });
+});
+
+// Loading screen
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  console.log("works");
+  body.classList.toggle("loaded");
 });
