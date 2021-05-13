@@ -162,4 +162,12 @@ body {
     left: 40px;
     width: 200px;
   }
+
+  body {
+    height: 281vh;
+  }
+
+  .projects {
+    height: 71vh;
+  }
 }
