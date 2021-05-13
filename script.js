@@ -29,11 +29,6 @@ menuSelections.forEach((selection) => {
 
 // Loading screen
 
-// document.addEventListener("DOMContentLoaded", (e) => {
-//   console.log("works");
-//   body.classList.toggle("loaded");
-// });
-
 video.addEventListener("play", (e) => {
   console.log("works");
   body.classList.toggle("loaded");
