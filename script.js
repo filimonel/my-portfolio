@@ -34,7 +34,7 @@ menuSelections.forEach((selection) => {
 //   body.classList.toggle("loaded");
 // });
 
-video.addEventListener("loadeddata", (e) => {
+video.addEventListener("play", (e) => {
   console.log("works");
   body.classList.toggle("loaded");
 });
