@@ -7,6 +7,7 @@ const aboutMeText = document.querySelector(".text-about-me");
 const aboutMe = document.querySelector(".about-me");
 const icons = document.querySelector(".program-icons-container > svg");
 const body = document.querySelector("body");
+const video = document.querySelector("video");
 // Event Listeners
 
 menuToggle.addEventListener("click", (e) => {
@@ -28,7 +29,12 @@ menuSelections.forEach((selection) => {
 
 // Loading screen
 
-document.addEventListener("DOMContentLoaded", (e) => {
+// document.addEventListener("DOMContentLoaded", (e) => {
+//   console.log("works");
+//   body.classList.toggle("loaded");
+// });
+
+video.addEventListener("loadeddata", (e) => {
   console.log("works");
   body.classList.toggle("loaded");
 });
