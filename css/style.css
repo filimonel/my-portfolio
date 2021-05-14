@@ -32,7 +32,9 @@ body {
 /********************** Resposivness *********************/
 
 @media(max-width: 320px) {
-
+  .projects {
+    top: 194vh;
+  }
   .text h3 {
     font-size: 1em;
   }
@@ -60,6 +62,10 @@ body {
 /************** Mobile M *******************/
 
 @media(max-width: 375px) {
+
+  .projects {
+    top: 195vh
+  }
   .text p {
     font-size: 0.6em;
   }
@@ -94,6 +100,10 @@ body {
     font-size: 1em;
   }
 
+  .projects {
+    top: 195vh;
+  }
+
   .program-icons-container svg {
     height: 50px;
     width: 50px;
@@ -116,6 +126,9 @@ body {
     font-size: 1em;
   }
 
+  .projects {
+    top: 205vh;
+  }
 }
 
 @media(max-width: 771px) {
@@ -153,7 +166,7 @@ body {
   }
 
   .contacts {
-    top: 340vh;
+    top: 277vh;
   }
 }
 
@@ -169,5 +182,15 @@ body {
 
   .projects {
     height: 71vh;
+  }
+
+  .contacts {
+    top: 277vh;
+  }
+}
+
+@media(min-width: 1125px) {
+  .projects {
+    top: 217vh;
   }
 }
