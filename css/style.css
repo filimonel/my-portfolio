@@ -9,7 +9,7 @@
 
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap");
 
 :root {
   --overlay-color: #95bdbb;
@@ -18,7 +18,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -26,12 +26,12 @@
 
 body {
   height: 325vh;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 /********************** Resposivness *********************/
 
-@media(max-width: 320px) {
+@media (max-width: 320px) {
   .projects {
     top: 194vh;
   }
@@ -58,13 +58,16 @@ body {
   .socials li i {
     width: 50px;
   }
+
+  .contacts {
+    top: 400vh;
+  }
 }
 /************** Mobile M *******************/
 
-@media(max-width: 375px) {
-
+@media (max-width: 375px) {
   .projects {
-    top: 195vh
+    top: 195vh;
   }
   .text p {
     font-size: 0.6em;
@@ -86,12 +89,15 @@ body {
   .socials li i {
     width: 50px;
   }
+
+  .contacts {
+    top: 398vh;
+  }
 }
 
 /*************** Mobile L ********************/
 
-@media(max-width: 425px) {
-
+@media (max-width: 425px) {
   .text h3 {
     font-size: 2.5em;
   }
@@ -118,10 +124,12 @@ body {
     width: 55px;
   }
 
+  .contacts {
+    top: 397vh;
+  }
 }
 
-@media(max-width: 692px) {
-
+@media (max-width: 692px) {
   .text p {
     font-size: 1em;
   }
@@ -131,13 +139,13 @@ body {
   }
 }
 
-@media(max-width: 771px) {
-
+@media (max-width: 768px) {
   body {
     height: 355vh;
   }
 
-  .showcase, .showcase header {
+  .showcase,
+  .showcase header {
     padding: 40px;
   }
 
@@ -154,23 +162,25 @@ body {
     margin-top: 65px;
   }
 
+  .contacts {
+    top: 345vh;
+  }
 }
 
-@media(max-width: 888px) {
+@media (max-width: 888px) {
+}
 
-} 
-
-@media(max-width: 1024px) {
+@media (min-width: 1024px) {
   body {
     height: 350vh;
   }
 
   .contacts {
-    top: 277vh;
+    top: 340vh;
   }
 }
 
-@media(max-width: 1124px) {
+@media (min-width: 1124px) {
   .text-about-me {
     left: 40px;
     width: 200px;
@@ -189,7 +199,7 @@ body {
   }
 }
 
-@media(min-width: 1125px) {
+@media (min-width: 1125px) {
   .projects {
     top: 217vh;
   }
