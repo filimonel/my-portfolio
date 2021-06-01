@@ -178,12 +178,17 @@ body {
   .contacts {
     top: 340vh;
   }
+
+  .text-about-me {
+    left: 100px;
+    width: 500;
+  }
 }
 
 @media (min-width: 1124px) {
   .text-about-me {
-    left: 40px;
-    width: 200px;
+    left: 313px;
+    width: 500px;
   }
 
   body {
